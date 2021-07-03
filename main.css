@@ -1,0 +1,185 @@
+body{
+    background: grey;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding: 20px;
+    display:inline-block;
+    height:300px;
+    width:100%;
+    background: black;
+    background-image:url("images/1.jpg");
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+/*background-position:center makes the window focus on center of the background image*/
+
+header .logo a{
+    background-image:url("images/healthy-food.jpg");
+    background-size:100px;
+    background-repeat:no-repeat;
+    position:relative;
+    top: -40px;
+    display: inline-block;
+    text-indent:-9999999px;
+    height:100px;
+    width:100px;
+}
+/*background-size sizes the images*/
+/*background-repeat allows no repeat of images*/
+/*text-indent allow text 'logo' to be moved off the screen, while maintaining readability for people with disability*/
+/*position:relative allows manual adjustment of boxes like top:-40px;*/
+
+.features{
+    background:white;
+    color:grey;
+    padding: 20px;
+    display: flex;
+    flex-direction:row;
+    background-image: url("images/3.jpg");
+    background-size:100%;
+    width:100%;
+    height: 300px;
+    background-position:center;
+}
+/*flex-wrap: wrap allows auto adjustment of images when out of room*/
+
+.features figure {
+    width:33%;
+    text-align:center;
+}
+
+.features figure img{
+    border-radius: 50%;
+    border: 1px solid white;
+    box-shadow: grey 0 0 10px;
+    width:200px;
+}
+
+.features figure figcaption{
+    color:black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+nav{
+    text-align: center;
+    text-transform:uppercase;
+}
+/*text-align: center aligns everything under nav to be centered*/
+
+nav .mobile{
+    display:none;
+}
+
+nav ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+nav ul li a{
+    color:white;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+li:first-child{
+    margin-left:5;
+}
+/*applies to first list element*/
+
+a{
+    text-decoration: none;
+}
+/*all hyperlinks have no default underline*/
+
+a:hover{
+    text-decoration:underline;
+    background:grey;
+    border-radius:5px;
+}
+/*underline when hovering over hyperlinks*/
+
+a:active{
+    text-decoration:none;
+    color:purple;
+}
+/*when clicking a hyperlink*/
+/*:hover and :active can be used on many items like li*/
+
+.feature-box{
+    display:flex;
+}
+
+.feature-box div{
+    color:white;
+    width:100%;
+    margin:1px;
+}
+/*for all div under the class of feature-box*/
+
+.feature-box.sales div{
+    background: grey;
+}
+/*for all div under class feature-box.sales*/
+
+.feature-box.closeouts div{
+    background:red;
+}
+
+section div{
+    background:red;
+    margin: auto;
+    /*display: inline-block;*/
+    width: 33%;
+    padding: 10px;
+}
+/*inline purely depends on amount of content, while inline-block allows you to change width, height etc.*/
+/*flex must be used in the parent folder "section" and it does a inline sort of thing, auto margin gives equal spaces all around*/
+
+footer{
+    background:black;
+    text-align: center;
+    color:grey;
+    padding: 15px;
+    font-size: 12px;
+    width:100%;
+}
+
+footer div{
+    display:inline-block;
+    padding:0 10px 0 10px;
+}
+
+/*responsive rules*/
+@media screen and (max-width:607px) {
+    nav .mobile{
+        display:inline-block;
+    }
+
+    nav .desktop{
+        display:none;
+    }
+
+    .features{
+        height:700px;
+    }
+}
+/*whenever window width is less than 607px, disable .desktop and enable .mobile*/
+
+@media screen and (max-width:840px){
+    .features{
+        display:block;
+        height:750px;
+    }
+}
+/*to display the feature images in block for mobile users*/
