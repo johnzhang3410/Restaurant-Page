@@ -1,5 +1,5 @@
 # Restaurant-Page
-A web page built with responsive design for all users
+A web page built with interactive menus/logos and a responsive design for all users (mobile etc.)
 
 Note that I have only built out the 'Home' page, as buiding other pages are quite repetitive and requires a lot of time (They are a lot of the same stuff)
 Written using HTML and CSS.
